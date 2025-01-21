@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <h2>Email Scheduler</h2>
+    <form>
+        <div>
+            <label for="subject">Subject:</label>
+            <input id="subject" value="Your Scheduled Email" name="subject" readonly />
+        </div>
+
+        <div>
+            <label for="body">Email Body:</label>
+            <textarea id="body" class="aa" readonly>
+                Dear recipient, 
+
+                This is a scheduled email.
+
+                For more details, visit <a href="https://www.example.com" target="_blank">this link</a>.
+
+                Best regards, 
+                Your Team
+            </textarea>
+        </div>
+
+        <div>
+            <label for="file">Upload Excel File:</label>
+            <input type="file" id="file" (change)="onFileSelected($event)" required />
+        </div>
+
+        <button type="button" (click)="sendEmails()">Send Emails</button>
+    </form>
+</div>
